@@ -1,4 +1,8 @@
 H2::Application.routes.draw do
+  get "account/login"
+
+  get "sign_in/login"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +52,7 @@ H2::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'account#login'
 
   # See how all your routes lay out with "rake routes"
 
