@@ -13,7 +13,14 @@
 <div data-role="page">
 
     <div data-role="header" style="padding:10px 0 6px 0;">
-        <%= image_tag("logo_header.png", :alt => "school hound - header logo") %>
+        <div style="text-align: center; width:100%; ">
+            <div style="position: relative; width:300px;margin: 0px auto; ">
+
+                <div style="float:left;"><%= image_tag("logo_header.png", :alt => "school hound - header logo") %></div>
+                <div style="float:right;"><a href="/home"><%= image_tag("icon_house.png", :alt => "Home") %></a></div>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
     </div><!-- /header -->
 
 
@@ -21,7 +28,7 @@
         <h1>Welcome <%= @user.name %>!</h1>
         <%= button_to "Start a tour", 'users/schoolTourHome', :method => "post", :name => "sth"  %>
         <!--<%= button_to "Start a tour", 'users/schoolTourHome', :method => "get" %>-->
-        <%= button_to "My Schools", 'users/mySchools', :method => "get" %>
+        <%= button_to "My schools", 'users/mySchools', :method => "get" %>
     </div><!-- /content -->
     <!--<div data-role="footer"style="margin-top:30px;padding:6px 0 6px 0;font-size:8pt;">&copy; Copyright 2013, GreatSchools, Inc.</div>-->
 </div><!-- /page -->

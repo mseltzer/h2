@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <title>My Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,14 +17,44 @@
 <div data-role="page">
 
     <div data-role="header" style="padding:10px 0 6px 0;">
-        <%= image_tag("logo_header.png", :alt => "school hound - header logo") %>
+        <div style="text-align: center; width:100%; ">
+            <div style="position: relative; width:300px;margin: 0px auto; ">
+
+                <div style="float:left;"><%= image_tag("logo_header.png", :alt => "school hound - header logo") %></div>
+                <div style="float:right;"><a href="/home"><%= image_tag("icon_house.png", :alt => "Home") %></a></div>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
     </div><!-- /header -->
 
 
-    <div data-role="content"><%= button_to "classrooms", 'classrooms', :method => "get" %>
-
-<%= button_to "DONE", 'recommendSchool', :method => "get" %>
-<%= button_to "HELP", 'HELP', :method => "get" %>
+    <div data-role="content">
+        <!--<%= button_to "classrooms", 'classrooms', :method => "get" %>-->
+        <div style="text-align: center; width:100%; padding:20px 0 20px 0;">
+            <div style="position: relative; width:278px; height:268px;margin: 0px auto; ">
+                <div style="position: absolute; top:54px; left:57px;">
+                    <%= image_tag("map_dog.png", :alt => "SchoolHound", :title => "Woof Woof" ) %>
+                </div>
+                <div style="position: absolute; top:80px; left:0px;">
+                    <a href="classrooms"><%= image_tag("seesaw.png", :alt => "classroom", :title => "Classroom" ) %></a>
+                </div>
+                <div style="position: absolute; top:80px; left:206px;">
+                    <a href="classrooms"><%= image_tag("classroom.png", :alt => "classroom", :title => "Classroom" ) %></a>
+                </div>
+                <div style="position: absolute; top:0px; left:103px;">
+                    <a href="classrooms"><%= image_tag("school.png", :alt => "classroom", :title => "Classroom" ) %></a>
+                </div>
+                <div style="position: absolute; top:195px; left:49px;">
+                    <a href="classrooms"><%= image_tag("hydrant.png", :alt => "Hallways and Bathrooms", :title => "Hallways and Bathrooms" ) %></a>
+                </div>
+                <div style="position: absolute; top:195px; left:155px;">
+                    <a href="classrooms"><%= image_tag("milkCarton.png", :alt => "classroom", :title => "Classroom" ) %></a>
+                </div>
+            </div>
+        </div>
+        <a href="help" data-role="button" data-inline="true">?</a>
+        <a href="notes" data-role="button" data-inline="true">Notes</a>
+        <a href="recommendSchool" data-role="button" data-inline="true">Done</a>
     </div><!-- /content -->
     <!--<div data-role="footer">&copy; Copyright 2013, GreatSchools, Inc.</div>-->
 </div><!-- /page -->
