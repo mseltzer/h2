@@ -6,6 +6,12 @@ H2::Application.routes.draw do
 
   get "users/classrooms"
 
+  get "users/notes"
+  get "users/help"
+  get "users/help2"
+  get "users/help3"
+  get "users/help4"
+
   get "users/tourSchool"
 
   get "users/schoolTourHome"
@@ -30,6 +36,7 @@ H2::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   resources :users
+  #resources :images
 
   # Sample resource route with options:
   #   resources :products do
