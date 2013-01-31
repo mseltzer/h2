@@ -19,8 +19,8 @@
 
     <div data-role="content">
         <h1>Welcome <%= @user.name %>!</h1>
-        <%= button_to "Start a tour", 'users/schoolTourHome', :method => "get", :html_options => {:name => "button1"}  %>
-        <%= button_to "Start a tour", 'users/schoolTourHome', :method => "get" %>
+        <%= button_to "Start a tour", 'users/schoolTourHome', :method => "post", :name => "sth"  %>
+        <!--<%= button_to "Start a tour", 'users/schoolTourHome', :method => "get" %>-->
         <%= button_to "My Schools", 'users/mySchools', :method => "get" %>
     </div><!-- /content -->
 </div><!-- /page -->

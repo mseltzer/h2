@@ -1,8 +1,10 @@
 H2::Application.routes.draw do
 
+  get "users/schoolTourHome"
+
   get "users/mySchools"
 
-  get "users/schoolTourHome"
+  post "users/schoolTourHome"
 
   get "users/index"
 
