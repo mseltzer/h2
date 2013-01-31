@@ -14,6 +14,7 @@ class UsersController < ApplicationController
 
   def schoolTourHome
     @school = Schools.find(1)
+    session[:school] = @school
   end
 
   def tourSchool
