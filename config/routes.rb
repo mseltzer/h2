@@ -1,5 +1,9 @@
 H2::Application.routes.draw do
 
+  get "users/mySchools"
+
+  get "users/schoolTourHome"
+
   get "users/index"
 
   # The priority is based upon order of creation:
