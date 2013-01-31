@@ -1,0 +1,5 @@
+<h1><%= @area.areaName %></h1>       <%= @user.name %> <%= @questions.length %>
+<% @questions.each_with_index do |q, i| %>
+    <%= q.question %>
+    <input type="range" name="slider-fill" id="q<%= i %>" value="1" min="1" max="5" step="1" data-highlight="true" />
+<% end %>

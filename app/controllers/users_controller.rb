@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
   def home
     @user = Users.find_by_name(params[:name]) || Users.create(:name => params[:name])
+    session[:user] = @user
   end
 
   def login
@@ -16,5 +17,11 @@ class UsersController < ApplicationController
   end
 
   def tourSchool
+  end
+
+  def classrooms
+    @area = Areas.find(1)
+    @questions = Questions.find_all_by_areaId(@area.id)
+    @user = session[:user]
   end
 end
