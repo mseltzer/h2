@@ -9,20 +9,10 @@
     <!--<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>-->
 
     <script>
-        //        $(function() {
-        //            $( "#slider" ).slider();
-        //        });
         $(function() {
-            $( "#slider" ).slider({
-                value:100,
-                min: 0,
-                max: 500,
-                step: 100,
-                slide: function( event, ui ) {
-                    $( "#amount" ).val( "$" + ui.value );
-                }
+            $( "#slider-fill" ).on( 'slidestop', function( event ) {
+                alert($( "#slider-fill").val());
             });
-            $( "#amount" ).val( "$" + $( "#slider" ).slider( "value" ) );
         });
     </script>
 </head>
@@ -62,9 +52,9 @@
                 <div style="float:right">Great</div>
             </div>
         </div> <br /><br /><br /><br />
-        <label for="slider-step">Input slider:</label>
-        <input type="range" name="slider-step" id="slider-step" value="150" min="0" max="500" step="50" />
-        <input type="range" name="slider-fill" id="slider-fill" value="60" min="0" max="100" data-highlight="true" />
+        <!--<label for="slider-step">Input slider:</label>-->
+        <!--<input type="range" name="slider-step" id="slider-step" value="3" min="1" max="5" step="1" />-->
+        <input type="range" name="slider-fill" id="slider-fill" value="1" min="1" max="5" step="1" data-highlight="true" />
         <br /><br />
 
     </div><!-- /content -->
