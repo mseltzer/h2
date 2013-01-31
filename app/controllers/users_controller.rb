@@ -33,6 +33,7 @@ class UsersController < ApplicationController
   end
 
   def notes
+    @area = session[:area];
   end
 
   def help
@@ -51,6 +52,7 @@ class UsersController < ApplicationController
     @area = Areas.find(1)
     @questions = Questions.find_all_by_areaId(@area.id)
     @user = session[:user]
+    session[:area] = @area;
   end
 
   def tips
