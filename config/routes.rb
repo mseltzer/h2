@@ -14,6 +14,7 @@ H2::Application.routes.draw do
   get "users/recommend"
 
   get "users/tourSchool"
+  get "users/schoolReview"
 
   get "users/schoolTourHome"
 

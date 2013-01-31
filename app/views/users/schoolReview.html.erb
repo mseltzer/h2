@@ -8,9 +8,9 @@
     <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 
 </head>
-<body style="text-align: center" style="background-color: #A93A6A">
+<body style="text-align: center">
 
-<div data-role="page" style="background-color: #A93A6A">
+<div data-role="page">
 
     <div data-role="header" >
         <a href="/home" class="ui-btn-right"><%= image_tag("icon_house.png", :alt => "Home") %></a>
@@ -18,13 +18,8 @@
     </div><!-- /header -->
 
 
-    <div data-role="content" style=" background-color: #A93A6A">
-        <h1 style="color: #FFFFFF">Welcome <%= @user.name %>!</h1>
-        <div style="padding: 50px 0 50px 0;"> <%= image_tag("logo_splash.png", :alt => "SchoolHound", :width=> "179", :height=> "62") %></div>
-        <%= button_to "Start a tour", 'users/schoolTourHome', :method => "post", :name => "sth"  %>
-        <!--<%= button_to "Start a tour", 'users/schoolTourHome', :method => "get" %>-->
-        <%= button_to "My schools", 'users/mySchools', :method => "get" %>
-        <div style="padding: 150px 0 50px 0;"> </div>
+    <div data-role="content">
+        <a href="/home"><%= image_tag("schoolReview.png", :alt => "School Review") %></a>
     </div><!-- /content -->
     <!--<div data-role="footer"style="margin-top:30px;padding:6px 0 6px 0;font-size:8pt;">&copy; Copyright 2013, GreatSchools, Inc.</div>-->
 </div><!-- /page -->

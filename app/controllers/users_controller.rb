@@ -48,6 +48,9 @@ class UsersController < ApplicationController
   def help3
   end
 
+  def schoolReview
+  end
+
   def help4
   end
 
