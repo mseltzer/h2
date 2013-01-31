@@ -37,19 +37,19 @@
     <div data-role="content">
         <div data-role="navbar">
             <ul>
-                <li><a href="classrooms"  class="ui-btn-active" ui-state-persist>Questions</a></li>
-                <li><a href="tips">Tips</a></li>
-                <li><a href="notes">Notes</a></li>
+                <li><a href="/users/classrooms"  class="ui-btn-active" ui-state-persist>Questions</a></li>
+                <li><a href="/users/tips">Tips</a></li>
+                <li><a href="/users/notes">Notes</a></li>
             </ul>
         </div><!-- /navbar -->
         <h1><%= @area.areaName %></h1>
         <!--<%= @user.name %> <%= @questions.length %>-->
         <% @questions.each_with_index do |q, i| %>
-            <p style="text-align: left"><%= q.question %></p>
+            <p style="text-align: left; padding-top: 20px;"><%= q.question %></p>
             <!--q.questionTypeId-->
             <div id="container_slider" style="width: 320px">
                 <input type="range" name="slider-fill" id="q<%= i %>" class="sliderQuestion" value="1" min="1" max="5" step="1" data-highlight="true" width="320px" />
-                <div id="selectors" style="padding: 20px 20px 0px 90px;">
+                <div id="selectors" style="padding: 0px 20px 0px 90px;">
                     <div style="float:left"><strong>Bad</strong></div>
                     <div style="float:right"><strong>Great</strong></div>
                     <div style="clear: both"></div>
