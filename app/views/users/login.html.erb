@@ -1,0 +1,6 @@
+<%= form_tag("/home", :method => "post") do %>
+    <%= label_tag(:name, "NAME") %>
+    <%= text_field_tag(:name) %>
+    <br/>
+    <%= submit_tag("GO, DOG, GO!") %>
+<% end %>

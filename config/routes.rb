@@ -1,7 +1,4 @@
 H2::Application.routes.draw do
-  get "account/login"
-
-  get "sign_in/login"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -16,6 +13,7 @@ H2::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  resources :users
 
   # Sample resource route with options:
   #   resources :products do
@@ -52,11 +50,13 @@ H2::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'account#login'
+  root :to => 'users#login'
 
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
+  match '/login', to: 'users#login'
+  match '/home', to: 'users#home'
 end
