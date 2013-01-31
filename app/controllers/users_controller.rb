@@ -18,11 +18,27 @@ class UsersController < ApplicationController
   end
 
   def tourSchool
+    schoolVisit = SchoolVisits.where(:userId => session[:user].id,
+                                     :schoolId => session[:school].id).first()
+    if schoolVisit == nil
+      schoolVisit = SchoolVisits.new
+      schoolVisit.userId = session[:user].id
+      schoolVisit.schoolId = session[:school].id
+      schoolVisit.save
+    else
+      schoolVisit.updated_at = Time.now
+      schoolVisit.save
+    end
+
   end
 
   def classrooms
     @area = Areas.find(1)
     @questions = Questions.find_all_by_areaId(@area.id)
     @user = session[:user]
+  end
+
+  def tips
+    @areaTips = Tips.find_all_by_areaId(params[:id])
   end
 end

@@ -1,5 +1,9 @@
 H2::Application.routes.draw do
 
+  get "users/tips"
+
+  get "users/notes"
+
   get "users/classrooms"
 
   get "users/tourSchool"
