@@ -16,15 +16,9 @@
 
 <div data-role="page">
 
-    <div data-role="header" style="padding:10px 0 6px 0;">
-        <div style="text-align: center; width:100%; ">
-            <div style="position: relative; width:300px;margin: 0px auto; ">
-
-                <div style="float:left;"><%= image_tag("logo_header.png", :alt => "school hound - header logo") %></div>
-                <div style="float:right;"><a href="home"><%= image_tag("icon_house.png", :alt => "Home") %></a></div>
-                <div style="clear: both;"></div>
-            </div>
-        </div>
+    <div data-role="header" >
+        <a href="/home" class="ui-btn-right"><%= image_tag("icon_house.png", :alt => "Home") %></a>
+        <span class="ui-title" ><%= image_tag("logo_header.png", :alt => "school hound - header logo") %></span>
     </div><!-- /header -->
 
 
