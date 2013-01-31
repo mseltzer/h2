@@ -14,4 +14,7 @@ class UsersController < ApplicationController
   def schoolTourHome
     @school = Schools.find(1)
   end
+
+  def tourSchool
+  end
 end
