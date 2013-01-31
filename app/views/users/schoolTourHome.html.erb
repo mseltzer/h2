@@ -1,5 +1,33 @@
-<h1>START YOUR TOUR AT:</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+
+
+
+
+
+</head>
+<body style="text-align: center">
+
+<div data-role="page">
+
+    <div data-role="header" style="padding:10px 0 6px 0;">
+        <%= image_tag("logo_header.png", :alt => "school hound - header logo") %>
+    </div><!-- /header -->
+
+
+    <div data-role="content"><h1>START YOUR TOUR AT:</h1>
 <p><%= @school.schoolName %></p>
 
 <%= button_to "START NOW", 'tourSchool', :method => "get" %>
 <a>Choose a nearby school &69#;</a>
+    </div><!-- /content -->
+</div><!-- /page -->
+
+</body>
+</html>
