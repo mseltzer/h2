@@ -16,14 +16,21 @@
 
 <div data-role="page">
 
-    <div data-role="header" >
+    <div data-role="header"  data-add-back-btn="true">
+        <a href="/home" class="ui-btn-left" data-rel="back">Back</a>
         <a href="/home" class="ui-btn-right"><%= image_tag("icon_house.png", :alt => "Home") %></a>
         <span class="ui-title" ><%= image_tag("logo_header.png", :alt => "school hound - header logo") %></span>
     </div><!-- /header -->
 
 
-    <div data-role="content"><h1>Users#mySchools</h1>
-<p>Find me in app/views/users/mySchools.html.erb</p>
+    <div data-role="content"><h1>My Toured Schools</h1>
+
+        <div data-role="controlgroup">
+            <a href="/users/schoolTourHome" data-role="button" data-icon="arrow-r">Marisa Chow Elementary School</a>
+            <a href="/users/schoolTourHome" data-role="button" data-icon="arrow-r">Minecraft Elementary School</a>
+            <a href="/users/schoolTourHome" data-role="button" data-icon="arrow-r">Sandfield Academy</a>
+            <a href="/users/schoolTourHome" data-role="button" data-icon="arrow-r">Washington Elementary School</a>
+        </div>
     </div><!-- /content -->
     <!--<div data-role="footer">&copy; Copyright 2013, GreatSchools, Inc.</div>-->
 </div><!-- /page -->
