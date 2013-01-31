@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  def index
+
+  end
   def home
     @user = Users.find_by_name(params[:name])
   end
