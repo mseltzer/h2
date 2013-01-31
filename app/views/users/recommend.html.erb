@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    <!--<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>-->
+
+    <script>
+        $(function() {
+            $(".sliderQuestion" ).on( 'slidestop', function( event ) {
+                var dataString = $(this).val();
+                $.ajax({
+                    url: url,
+                    dataType: 'json',
+                    data: dataString,
+                    success: success
+                });
+                alert($(this).val());
+            });
+        });
+    </script>
+</head>
+<body style="text-align: center">
+
+<div data-role="page">
+
+    <div data-role="header"  data-add-back-btn="true">
+        <a href="/home" class="ui-btn-left" data-rel="back">Back</a>
+        <a href="/home" class="ui-btn-right"><%= image_tag("icon_house.png", :alt => "Home") %></a>
+        <span class="ui-title" ><%= image_tag("logo_header.png", :alt => "school hound - header logo") %></span>
+    </div><!-- /header -->
+
+
+    <div data-role="content">
+        <h1>Would you recommend this school?</h1>
+        <a href="index.html" data-role="button" data-inline="true">No</a>
+        <a href="index.html" data-role="button" data-inline="true">Yes</a>
+
+    </div><!-- /content -->
+    <!--<div data-role="footer">&copy; Copyright 2013, GreatSchools, Inc.</div>-->
+</div><!-- /page -->
+
+</body>
+</html>

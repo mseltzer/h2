@@ -11,6 +11,7 @@ H2::Application.routes.draw do
   get "users/help2"
   get "users/help3"
   get "users/help4"
+  get "users/recommend"
 
   get "users/tourSchool"
 
@@ -73,7 +74,7 @@ H2::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'users#index'
+  root :to => 'users#login'
 
   # See how all your routes lay out with "rake routes"
 

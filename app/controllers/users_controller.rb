@@ -36,6 +36,9 @@ class UsersController < ApplicationController
     @area = session[:area];
   end
 
+  def recommend
+  end
+
   def help
   end
 
