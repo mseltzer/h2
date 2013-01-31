@@ -55,6 +55,12 @@ class UsersController < ApplicationController
     @area = Areas.find(1)
     @questions = Questions.find_all_by_areaId(@area.id)
     @user = session[:user]
+    @lowerBound = Array.new
+    @upperBound = Array.new
+    @questions.each do |q|
+      @lowerBound.push(Responses.where(:questionId => q.id, :responseId => 1))
+      @upperBound.push(Responses.where(:questionId => q.id, :responseId => 5))
+    end
     session[:area] = @area;
   end
 
