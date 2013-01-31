@@ -1,5 +1,13 @@
 H2::Application.routes.draw do
 
+  get "users/offices"
+
+  get "users/hallways"
+
+  get "users/cafeteria"
+
+  get "users/playAndGym"
+
   get "users/tips"
 
   get "users/notes"

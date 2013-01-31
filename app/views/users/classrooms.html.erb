@@ -51,8 +51,16 @@
             <div id="container_slider" style="width: 320px">
                 <input type="range" name="slider-fill" id="q<%= i %>" class="sliderQuestion" value="1" min="1" max="5" step="1" data-highlight="true" width="320px" />
                 <div id="selectors" style="padding: 0px 20px 0px 90px;">
-                    <div style="float:left"><strong> <%= @lowerBound[i][0].response %></strong></div>
-                    <div style="float:right"><strong> <%= @upperBound[i][0].response %></strong></div>
+                    <% if @lowerBound[i][0].response != nil %>
+                        <div style="float:left"><strong> <%= @lowerBound[i][0].response %></strong></div>
+                    <% else %>
+                        NO
+                    <% end %>
+                    <% if @lowerBound[i][0].response != nil %>
+                        <div style="float:right"><strong> <%= @upperBound[i][0].response %></strong></div>
+                    <% else %>
+                        YES
+                    <% end %>
                     <div style="clear: both"></div>
                 </div>
             </div>
