@@ -32,6 +32,21 @@ class UsersController < ApplicationController
 
   end
 
+  def notes
+  end
+
+  def help
+  end
+
+  def help2
+  end
+
+  def help3
+  end
+
+  def help4
+  end
+
   def classrooms
     @area = Areas.find(1)
     @questions = Questions.find_all_by_areaId(@area.id)
