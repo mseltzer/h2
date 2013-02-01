@@ -33,7 +33,17 @@ class UsersController < ApplicationController
   end
 
   def notes
-    @area = session[:area];
+    @pagenameArea = "classrooms"
+    @area = session[:area]
+    if @area.id == 2
+      @pagenameArea = "playAndGym"
+    elsif @area.id == 3
+      @pagenameArea = "cafeteria"
+    elsif @area.id == 4
+      @pagenameArea = "hallways"
+    elsif @area.id == 5
+      @pagenameArea = "offices"
+    end
   end
 
   def recommend
@@ -130,6 +140,18 @@ class UsersController < ApplicationController
   end
 
   def tips
+    @pagenameArea = "classrooms"
+    @area = session[:area]
+    if @area.id == 2
+      @pagenameArea = "playAndGym"
+    elsif @area.id == 3
+      @pagenameArea = "cafeteria"
+    elsif @area.id == 4
+      @pagenameArea = "hallways"
+    elsif @area.id == 5
+      @pagenameArea = "offices"
+    end
+
     @areaTips = Tips.find_all_by_areaId(params[:id])
   end
 end
